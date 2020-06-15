@@ -1,1 +1,44 @@
-//
+body {
+    font-family: "Sawarabi Gothic";
+}
+.back-link {
+    margin-top: 20px;
+    text-align: right;
+}
+.breadcrumb {
+    background: none;
+    padding: 0;
+}
+.material-icons {
+    vertical-align: middle;
+    margin-top: -6px;
+}
+.row.justify-content-center {
+    margin-bottom: 20px;
+}
+.list-answer {
+    margin: 0;
+    padding: 0;
+}
+.initial-letter {
+    font-size: 32px;
+}
+.user_name {
+    font-size: 12px;
+    text-align: right;
+}
+.list-answer li {
+    border-top: 1px dashed #333;
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+.alert-success {
+    border-color: #c3e6cb;
+    margin-top: 20px;
+}
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
