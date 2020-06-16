@@ -51,5 +51,36 @@ class User extends Authenticatable
     public function answers()
     {
         return $this->hasMany(Answer::class);
-    }    
+    }
+
+    /**
+     * ユーザが参考になったを押したアンサーを取得
+     */
+    public function like()
+    {
+        return $this->belongsToMany(User::class, 'likes', 'user_id', 'answer_id');
+    }
+
+    /**
+     * 指定された $userIdのユーザをこのユーザがフォロー中であるか調べる。フォロー中ならtrueを返す。
+     *
+     * @param  int  $userId
+     * @return bool
+     */
+    public function is_likes($userId)
+    {
+
+    }
+    
+    /**
+    * 回答を参考になったする
+    */
+    public function set_like($answerId)
+    {
+        // すでに参考になったしているかの確認
+        
+        $this->like()->attach($answerId);
+    }
+
+
 }

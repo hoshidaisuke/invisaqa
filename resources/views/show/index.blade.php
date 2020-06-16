@@ -41,11 +41,14 @@
                                     <p class="initial-letter">A.{{ $i++ }}</p>
                                     <p>{{ nl2br(e($answer->content)) }}</p>
                                 
-                                @foreach ($users as $user)
-                                    @if($answer->user_id === $user->id)
-                                        <p class="user_name">名前：{{ $user->name }}</p>
-                                    @endif
-                                @endforeach
+                                    @foreach ($users as $user)
+                                        @if($answer->user_id === $user->id)
+                                            <p class="user_name">名前：{{ $user->name }}</p>
+                                        @endif
+                                    @endforeach
+                                    {!! Form::open(['route' => ['user.set_like', $user->id]]) !!}
+                                        {!! Form::submit('参考になった', ['class' => "btn btn-danger btn-block"]) !!}
+                                    {!! Form::close() !!}
                                 </div>
                             </li>
                         @endif

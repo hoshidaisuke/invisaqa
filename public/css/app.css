@@ -2,6 +2,12 @@ body {
   font-family: "Sawarabi Gothic";
 }
 
+html {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 20px;
+}
+
 .back-link {
   margin-top: 20px;
   text-align: right;
@@ -51,5 +57,8 @@ footer {
   background: #000;
   color: #fff;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 

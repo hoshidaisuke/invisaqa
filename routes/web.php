@@ -26,4 +26,5 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('posts', 'PostsController', ['only' => ['store', 'destroy']]);
     Route::resource('answers', 'AnswersController', ['only' => ['store', 'destroy']]);
+    Route::resource('likes', 'LikesController', ['only' => ['store', 'destroy']]);
 });

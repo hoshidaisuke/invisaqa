@@ -22,4 +22,12 @@ class Answer extends Model
     {
         return $this->hasMany(Post::class);
     }
+
+    /**
+     * この答えが所有する参考になった
+     */
+    public function likes()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
