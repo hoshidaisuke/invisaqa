@@ -1,3 +1,4 @@
+<footer>
 <nav>
     <ul class="footer-nav">
         <li><a href="/">TOP</a></li>
@@ -6,6 +7,6 @@
     </ul>
 </nav>
 
-<footer>
+
     <small>Copyright © インビザQA All Rights Reserved.</small>
 </footer>
