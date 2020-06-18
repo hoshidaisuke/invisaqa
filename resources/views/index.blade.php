@@ -3,6 +3,9 @@
 @section('content')
 
 <div class="container">
+    <div class="main-image">
+        <img src="./img/invisaqa_main.png" alt="インビザラインQ&A">
+    </div>
     @if (Auth::check())
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -40,7 +43,7 @@
                         </div>
                     @endif
 
-                    <ul>
+                    <ul class="question">
                         @foreach($posts as $post)
                             <li>{!! link_to_route('show.index', $post->title,  ['id' => $post->id] ) !!}</li>
                         @endforeach

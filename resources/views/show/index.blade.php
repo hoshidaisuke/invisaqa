@@ -22,7 +22,7 @@
                         </div>
                     @endif
                     <div class="alert alert-dark" role="alert">
-                    <p class="initial-letter">Q.</p>
+                    <p class="initial-letter q">Q.</p>
                     <p>{{ $post->content }}</p>
                     
                     @foreach ($users as $user)

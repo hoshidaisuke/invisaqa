@@ -5,7 +5,23 @@ body {
 html {
   min-height: 100vh;
   position: relative;
-  padding-bottom: 65px;
+  padding-bottom: 75px;
+}
+
+a {
+  color: #5384a2;
+}
+
+header .bg-dark {
+  background-color: #8ba6b7 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.main-image {
+  text-align: center;
 }
 
 .back-link {
@@ -34,6 +50,11 @@ html {
 
 .initial-letter {
   font-size: 32px;
+  color: #68abff;
+}
+
+.initial-letter.q {
+  color: #f4a591;
 }
 
 .initial-letter .small {
@@ -45,6 +66,28 @@ html {
   text-align: right;
 }
 
+.card-body > .question > li {
+  margin-bottom: 10px;
+  list-style: none;
+  position: relative;
+  padding: 0;
+}
+
+.card-body > .question > li::before {
+  position: absolute;
+  border-radius: 50%;
+  background: #5384a2;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 12px;
+  left: -20px;
+}
+
+.card-body > .question > li a {
+  font-size: 18px;
+}
+
 .list-answer li {
   border-top: 1px dashed #333;
   list-style: none;
@@ -52,9 +95,59 @@ html {
   padding: 0;
 }
 
+.alert-dark {
+  color: #1b1e21;
+  background-color: #fff;
+  border-color: #c6c8ca;
+}
+
+.btn.alert-dark {
+  background: #2886fb;
+  color: #fff;
+}
+
+.btn.alert-dark:disabled {
+  background: #a5a5a5;
+}
+
 .alert-success {
-  border-color: #c3e6cb;
+  color: #333;
+  border-color: #91caf4;
   margin-top: 20px;
+  background-color: #f5faff;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #7bb5d8;
+  border-color: #6286ad;
+}
+
+.btn-success:hover,
+.btn-success.focus,
+.btn-success:focus,
+.btn-success:not(:disabled):not(.disabled).active,
+.btn-success:not(:disabled):not(.disabled):active,
+.show > .btn-success.dropdown-toggle {
+  background-color: #5f99d8;
+  border-color: #0062cc;
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  background-color: #5f99d8;
+  border-color: #0062cc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #7bb5d8;
+  border-color: #6286ad;
+}
+
+.page-item.active .page-link {
+  background-color: #7bb5d8;
+  border-color: #6286ad;
 }
 
 .footer-nav {
@@ -75,11 +168,12 @@ html {
 }
 
 footer {
-  background: #000;
+  background-color: #8ba6b7;
   color: #fff;
   text-align: center;
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding-bottom: 10px;
 }
 
