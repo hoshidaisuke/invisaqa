@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <h2 class="card-header">質問</h2>
+                    <h2 class="card-header">インビザラインの質問</h2>
                     <div class="card-body">
                         
                             {!! Form::model($posts, ['route' => 'posts.store']) !!}
@@ -31,7 +31,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <h2 class="card-header">インビザラインのQ&A一覧</h2>
+                <h2 class="card-header">インビザラインのQ&A</h2>
 
                 <div class="card-body">
                     @if (session('status'))

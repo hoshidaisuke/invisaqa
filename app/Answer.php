@@ -26,8 +26,17 @@ class Answer extends Model
     /**
      * この答えが所有する参考になった
      */
-    public function likes()
+    public function like_users()
     {
-        return $this->hasMany(Post::class);
+        return $this->belongsToMany(User::class, 'likes', 'answer_id', 'user_id')->withTimestamps();
     }
+
+    /**
+     * このユーザに関係するモデルの件数をロードする。
+     */
+    public function loadRelationshipCounts()
+    {
+        $this->loadCount('');
+    }
+    
 }

@@ -6,10 +6,18 @@ use Illuminate\Http\Request;
 
 class LikesController extends Controller
 {
-    // 回答に参考になったを押すアクション
-    public function store($id)
+    // 参考になったを保存
+     public function store(Request $request, $id)
     {
         \Auth::user()->like($id);
-        return back;
+        return back();
     }
+
+    // 参考になったを削除
+    public function destroy($id)
+    {
+            \Auth::user()->unlike($id);
+            return back();
+    }    
+
 }

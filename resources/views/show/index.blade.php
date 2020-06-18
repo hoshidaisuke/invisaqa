@@ -32,13 +32,13 @@
                     @endforeach
                     </div>
                     <ul class="list-answer">
-                    <?php $i = 0; ?>
+                    <?php $i = 1; ?>
                     @foreach ($answers as $answer)
                         
                         @if ($post->id === $answer->post_id)
                             <li>
                                 <div class="alert alert-success" role="alert">
-                                    <p class="initial-letter">A.{{ $i++ }}</p>
+                                    <p class="initial-letter">A.<span class="small">{{ $i++ }}つ目の回答</span></p>
                                     <p>{{ nl2br(e($answer->content)) }}</p>
                                 
                                     @foreach ($users as $user)
@@ -46,11 +46,32 @@
                                             <p class="user_name">名前：{{ $user->name }}</p>
                                         @endif
                                     @endforeach
-                                    {!! Form::open(['route' => ['user.set_like', $user->id]]) !!}
-                                        {!! Form::submit('参考になった', ['class' => "btn btn-danger btn-block"]) !!}
-                                    {!! Form::close() !!}
+ 
+                                    @if (Auth::user()->is_like($answer->id))
+                                        <p><input class="btn alert-dark" type="submit" value="参考になった" disabled></p>
+                                    @else
+                                        {!! Form::open(['route' => ['likes.like', $answer->id]]) !!}
+                                            <p>{!! Form::submit('参考になった', ['class' => "btn btn-success"]) !!}</p>
+                                        {!! Form::close() !!}
+                                    @endif
+                                    <?php $j = 0; ?>
+                                    @foreach ($likes as $like)
+                                        @if ($answer->id === $like->answer_id)
+                                            <?php $j++; ?>
+                                        @endif
+                                    @endforeach
+                                    <p>参考になった人の数<em>{{ $j }}</em>人</p>
+                                    
+                                    
                                 </div>
                             </li>
+                        @elseif ($loop->first)
+
+                            <p>回答がまだありません</p>
+                            @if (!Auth::check())
+                                <p><a href="/login"><span class="material-icons">keyboard_arrow_right</span>ログインして回答する</a></p>
+                                <p><a href="/signup"><span class="material-icons">keyboard_arrow_right</span>新規登録して回答する</a></p>
+                            @endif
                         @endif
                     @endforeach
                     </ul>

@@ -56,10 +56,43 @@ class User extends Authenticatable
     /**
      * ユーザが参考になったを押したアンサーを取得
      */
-    public function like()
+    public function likes()
     {
-        return $this->belongsToMany(User::class, 'likes', 'user_id', 'answer_id');
+        return $this->belongsToMany(Answer::class, 'likes', 'user_id', 'answer_id')->withTimestamps();
     }
+
+    
+    /**
+    * 回答を参考になったする
+    */
+    public function like($answerId)
+    {
+        // すでに参考になったしているかの確認
+        $exist = $this->is_like($answerId);
+        if ($exist) {
+            return false;
+        } else {
+            $this->likes()->attach($answerId);
+            return true;
+        }
+    }
+
+    
+    /**
+    * 回答を参考になったする
+    */
+    public function unlike($answerId)
+    {
+        // すでに参考になったしているかの確認
+        $exist = $this->is_like($answerId);
+        if ($exist) {
+            $this->likes()->attach($answerId);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     /**
      * 指定された $userIdのユーザをこのユーザがフォロー中であるか調べる。フォロー中ならtrueを返す。
@@ -67,20 +100,11 @@ class User extends Authenticatable
      * @param  int  $userId
      * @return bool
      */
-    public function is_likes($userId)
+    public function is_like($answerId)
     {
+        return $this->likes()->where('answer_id', $answerId)->exists();
+    }
 
-    }
-    
-    /**
-    * 回答を参考になったする
-    */
-    public function set_like($answerId)
-    {
-        // すでに参考になったしているかの確認
-        
-        $this->like()->attach($answerId);
-    }
 
 
 }
