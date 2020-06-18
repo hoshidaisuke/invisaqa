@@ -12,6 +12,12 @@
 */
 
 Route::get('/', 'PostsController@index');
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+Route::get('/terms', function () {
+    return view('terms');
+});
 Route::get('show/{id}', 'AnswersController@show')->name('show.index');
 // signup
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
