@@ -22,14 +22,16 @@
                         </div>
                     @endif
                     <div class="alert alert-dark" role="alert">
-                    <p class="initial-letter q">Q.</p>
-                    <p>{{ $post->content }}</p>
-                    
-                    @foreach ($users as $user)
-                         @if($post->user_id === $user->id)
-                             <p class="user_name">名前：{{ $user->name }}</p>
-                         @endif
-                    @endforeach
+                        <p class="initial-letter q">Q.</p>
+                        <p>{{ $post->content }}</p>
+                        
+                        @foreach ($users as $user)
+                             @if($post->user_id === $user->id)
+                                 <p class="user_name">名前：{{ $user->name }}</p>
+                             @endif
+                        @endforeach
+                        <a href="{{ 'https://twitter.com/intent/tweet?text=' . $post->content . '%E3%81%A8%E3%81%84%E3%81%86%E8%B3%AA%E5%95%8F%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%EF%BC%81%23%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B6%E3%83%A9%E3%82%A4%E3%83%B3' .' &url=' . request()->fullUrl() }}" class="flowbtn12 widthauto fl_tw2" target="blank"
+                ><i class="fab fa-twitter"></i><span>Twitter</span></a>
                     </div>
                     <ul class="list-answer">
                     <?php $i = 1; ?>

@@ -9,7 +9,9 @@ html {
 a {
     color: #5384a2;
 }
-
+ul {
+    list-style: none;
+}
 header .bg-dark{
     background-color: #8ba6b7!important;
 }
@@ -145,4 +147,148 @@ footer {
     bottom: 0;
     width: 100%;
     padding-bottom: 10px;
+}
+
+/* ボタン全体 */
+.flowbtn12{
+font-family:'Verdana',sans-serif;	
+border-radius: 4px;
+display:inline-block;
+width:100%;
+font-size:20px;
+transition:.4s;	
+text-decoration:none;
+    &.widthauto {
+        width: auto;
+        padding: 0 20px 0 15px;
+    }
+}
+
+/* ボタン内テキストマウスホバー時 */
+.flowbtn12:hover{
+color:#fff!important;
+text-decoration:none;
+}
+/* Twitter */
+.flowbtn12.fl_tw2{
+border:solid 1px #55acee;
+color:#55acee;
+}
+/* Twitterマウスホバー時 */
+.flowbtn12.fl_tw2:hover{
+border:solid 1px #55acee;
+background:#55acee;
+}
+/* Instagram */
+.flowbtn12.insta_btn2{
+border:solid 1px #c6529a;
+color:#c6529a;
+}
+/* Instagramマウスホバー時 */
+.flowbtn12.insta_btn2:hover{
+border:solid 1px #c6529a;
+background:#c6529a;
+}
+/* Facebook */
+.flowbtn12.fl_fb2{
+border:solid 1px #3b5998;
+color:#3b5998;
+}
+/* Facebookマウスホバー時 */
+.flowbtn12.fl_fb2:hover{
+border:solid 1px #3b5998;
+background:#3b5998;
+}
+/* Feedly */
+.flowbtn12.fl_fd2{
+border:solid 1px #6cc655;
+color:#6cc655;
+}
+/* Feedlyマウスホバー時 */
+.flowbtn12.fl_fd2:hover{
+border:solid 1px #6cc655;
+background:#6cc655;
+}
+/* Pocket */
+.flowbtn12.fl_pk2{
+border:solid 1px #ef3f56;
+color:#ef3f56;
+}
+/* Pocketマウスホバー時 */
+.flowbtn12.fl_pk2:hover{
+border:solid 1px #ef3f56;
+background:#ef3f56;
+}
+/* はてブ */
+.flowbtn12.fl_hb2{
+border:solid 1px #1ba5dc;
+color:#1ba5dc;
+}
+/* はてブマウスホバー時 */
+.flowbtn12.fl_hb2:hover{
+border:solid 1px #1ba5dc;
+background:#1ba5dc;
+}
+/* YouTube */
+.flowbtn12.fl_yu2{
+border:solid 1px #fc0d1c;
+color:#fc0d1c;
+}
+/* YouTubeマウスホバー時 */
+.flowbtn12.fl_yu2:hover{
+border:solid 1px #fc0d1c;
+background:#fc0d1c;
+}
+/* LINE */
+.flowbtn12.fl_li2{
+border:solid 1px #00c300;
+color:#00c300;
+}
+/* LINEマウスホバー時 */
+.flowbtn12.fl_li2:hover{
+border:solid 1px #00c300;
+background:#00c300;
+}
+/* メールアイコン */
+.flowbtn12.fl_ma2{
+border:solid 1px #f3981d;
+color:#f3981d;
+}
+/* メールアイコンマウスホバー時 */
+.flowbtn12.fl_ma2:hover{
+border:solid 1px #f3981d;
+background:#f3981d;
+}
+/* プロフィールアイコン */
+.flowbtn12.fl_pf12{
+border:solid 1px #555;
+color:#555;
+}
+/* プロフィールアイコンマウスホバー時 */
+.flowbtn12.fl_pf12:hover{
+border:solid 1px #555;
+background:#555;
+}
+/* ボタン内テキスト調整 */
+.flowbtn12 span{
+font-size:14px;	
+position:relative;
+left:8px;
+bottom:2px;	
+}
+/* ulタグの内側余白を０にする */
+ul.snsbtniti2{
+padding:0!important;
+}
+/* ボタン全体の位置 */
+.snsbtniti2{
+margin-top:20px;
+display:flex;
+flex-flow:row wrap;
+justify-content: space-between;
+}
+/* ボタン同士の余白 */
+.snsbtniti2 li{
+flex-basis: 31.3%;
+text-align:center !important;
 }
