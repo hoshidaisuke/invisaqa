@@ -16,8 +16,8 @@ class LikesController extends Controller
     // 参考になったを削除
     public function destroy($id)
     {
-            \Auth::user()->unlike($id);
-            return back();
+        \Auth::user()->unlike($id);
+        return back();
     }    
 
 }
