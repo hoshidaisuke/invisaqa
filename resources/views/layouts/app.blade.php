@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
     </head>
 
     <body>
