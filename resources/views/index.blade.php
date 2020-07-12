@@ -58,6 +58,7 @@
             <li><a href="//timeline.line.me/social-plugin/share?url=https://invisaqa.herokuapp.com/" class="flowbtn12 fl_li2"><i class="fab fa-line"></i><span>LINE</span></a></li>
             <li><a href="http://b.hatena.ne.jp/add?mode=confirm&url=https://invisaqa.herokuapp.com/" class="flowbtn12 fl_hb2"><i class="fas fa-bold"></i><span>Hatena</span></a></li>
         </ul>
+        <p style="margin-top: 30px;">※医学的なご質問は信頼できる医師にご相談ください。</p>
     </div>
 </div>
 
