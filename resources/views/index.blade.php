@@ -54,6 +54,8 @@
         <div class="card">
             <h2 class="card-header">インビザラインのアンケート</h2>
             <div class="card-body">
+                <h3>インビザラインやってよかった？</h3>
+                <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">聞きにくいことを聞いちゃいます！<br>インビザラインやってよかった？<br><br>対象：治療終了、もしくは歯を動かし終わった人</p>&mdash; やす🦷インビザライン矯正6/52 (@wfoMY4eLIQtyHn1) <a href="https://twitter.com/wfoMY4eLIQtyHn1/status/1290066447650000898?ref_src=twsrc%5Etfw">August 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 <h3>インビザライン気づかれた？</h3>
                 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">インビザラインを初めてから2ヵ月ほど経ちますが嫁以外誰にもいってないんですが、思った以上に気づかれないですね。<br>もちろんコロナでマスクしてるせいもありますが。<br><br>みなさん、言ってないのにインビザライン気づかれたことありますか？</p>&mdash; やす🦷インビザライン矯正6/52 (@wfoMY4eLIQtyHn1) <a href="https://twitter.com/wfoMY4eLIQtyHn1/status/1289191004482854913?ref_src=twsrc%5Etfw">July 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 <h3>インビザライン中の歯の痛みについて</h3>

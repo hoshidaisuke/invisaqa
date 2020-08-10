@@ -1,6 +1,6 @@
                     <div class="alert alert-dark" role="alert">
                         <h2 class="initial-letter q"><span>Q.</span><span>{{ $post->title }}</span></h2>
-                        <p>{{ $post->content }}</p>
+                        <p>{!! nl2br(e($post->content)) !!}</p>
                         
                         @foreach ($users as $user)
                              @if($post->user_id === $user->id)

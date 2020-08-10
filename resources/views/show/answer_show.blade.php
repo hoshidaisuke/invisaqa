@@ -5,7 +5,7 @@
                             <li>
                                 <div class="alert alert-success" role="alert">
                                     <p class="initial-letter">A.<span class="small">{{ $i++ }}つ目の回答</span></p>
-                                    <p>{{ nl2br(e($answer->content)) }}</p>
+                                    <p>{!! nl2br(e($answer->content)) !!}</p>
                                 
                                     @foreach ($users as $user)
                                         @if($answer->user_id === $user->id)
